@@ -27,6 +27,21 @@
 		pzlPieces[3].src = 'images/bottomRight'+ id+'.jpg';
 	}
 
+	function movePiecesBack(){
+		//first append to the puzzle pieces
+		// if parent element is drop-zone,
+			// append to puzzle pieces
+
+		pzlPieces.forEach(piece =>{
+				if (piece.parentElement.className.includes("drop-zone")){
+					console.log(piece);
+
+					document.querySelector(".puzzle-pieces").appendChild(piece.parentNode.childNodes[0])
+				}
+			
+		});
+
+	}
 
 
 
@@ -34,7 +49,8 @@
 		
 		resetBackg(this.dataset.bgref);
 		updatedPieces(this.dataset.bgref);
-
+		//debugger;
+		movePiecesBack();
 	}
 
 	function allowDrag(event) {
