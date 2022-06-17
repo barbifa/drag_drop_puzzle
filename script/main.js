@@ -54,7 +54,13 @@
 		event.preventDefault();
 		let droppedElId = event.dataTransfer.getData('draggedEl');
 		console.log("dropped");
+		// retrieve the dragged el by its ID, and then put it inside the current drop zone
 
+		if (event.currentTarget.childNodes.length == 0){
+			this.appendChild(document.querySelector(`#${droppedElId}`));
+		} else {
+			alert("Only one piece is allowed");
+		}
 			
 	}
 
