@@ -1,0 +1,8 @@
+
+1) when the user clicks in the thumbnail
+    1.1) update puzzle pieces - Done
+    1.2) clean the board - Done
+    1.3) if there are pieces on the board, move then back all the pieces to the old place - Done
+
+2) When the user drags a piece to a drag zone, only one piece should be there. Do not allow more than one - Done
+
